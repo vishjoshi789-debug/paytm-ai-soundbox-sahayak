@@ -99,7 +99,7 @@ tab1, tab2, tab3 = st.tabs(["🎙️ Voice Copilot", "☀️ Morning Briefing", 
 
 # TAB 1: MULTI-TURN VERNACULAR VOICE COPILOT
 with tab1:
-    top_bar1, top_bar2 = st.columns()
+    top_bar1, top_bar2 = st.columns([4, 1])
     top_bar1.write("Ask follow-up questions in Marathi, Hindi, or English:")
     if top_bar2.button("🗑️ Clear Chat"):
         st.session_state.messages = []
