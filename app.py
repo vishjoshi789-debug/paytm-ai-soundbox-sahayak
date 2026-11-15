@@ -136,7 +136,8 @@ with tab1:
                 try:
                     trim_wav_to_25s(raw_path, trimmed_path, max_seconds=25)
                     with open(trimmed_path, "rb") as f:
-                        stt_resp = client.speech_to_text.transcribe(
+                        stt = client.speech_to_text.transcribe(file=("audio.wav", af, "audio/wav"), model="saaras:v3", mode="transcribe")
+
                             file=f,
                             model="saaras:v3",
                             mode="transcribe"
